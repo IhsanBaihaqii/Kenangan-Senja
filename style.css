@@ -254,6 +254,41 @@ nav .extra a:hover {
   border-radius: 10px;
 }
 
+/*Footer*/
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+}
+footer .social {
+  padding: 1rem 0 2rem;
+  font-size: 1.4rem;
+}
+footer .social a {
+  color: white;
+  margin: 1rem;
+}
+footer .social a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
+footer .links {
+  margin-bottom: 1.4rem;
+}
+footer .links a {
+  color: white;
+  padding: 0.7rem 1rem;
+}
+footer .credit {
+  font-size: 1.1rem;
+}
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+}
+
 /*Media Query*/
 /*Laptop*/
 @media (max-width: 1366px) {
