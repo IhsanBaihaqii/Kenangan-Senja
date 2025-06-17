@@ -18,6 +18,7 @@ body {
   background-color: var(--bg);
   color: #fff;
 }
+
 /*Navbar*/
 nav {
   display: flex;
@@ -71,6 +72,36 @@ nav .extra a:hover {
 }
 #hamburger {
   display: none;
+}
+/* Navbar Search */
+nav .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+nav .search-form.active {
+  transform: scaleY(1);
+}
+nav .search-form input[type="search"] {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--bg);
+  padding: 1rem;
+}
+nav .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: var(--bg);
 }
 
 /*Hero*/
@@ -329,6 +360,10 @@ footer .credit a {
   }
   nav .navbar a:hover::after {
     transform: scaleX(0.2);
+  }
+  nav .search-form {
+    width: 90%;
+    right: 2rem;
   }
 
   /*about*/
