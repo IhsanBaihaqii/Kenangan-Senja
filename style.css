@@ -160,11 +160,13 @@ nav .search-form label {
 /*About*/
 .about,
 .menu,
+.produk,
 .contact {
   padding: 8rem 7% 1.4rem;
 }
 .about h2,
 .menu h2,
+.produk h2,
 .contact h2 {
   text-align: center;
   font-size: 2.6rem;
@@ -199,6 +201,7 @@ nav .search-form label {
   margin-top: 1rem;
 }
 .menu p,
+.produk p,
 .contact p {
   text-align: center;
   max-width: 41rem;
@@ -233,6 +236,64 @@ nav .search-form label {
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
+}
+
+/* Produk */
+.produk .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+.produk .produk-card {
+  text-align: center;
+  border: 1px solid #666;
+  padding: 2rem;
+}
+.produk .produk-icon {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.produk .produk-icon a {
+  width: 4rem;
+  height: 4rem;
+  color: #fff;
+  margin: 0.3rem;
+  border: 1px solid #666;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.produk .produk-icon a:hover {
+  background-color: var(--primary);
+}
+.produk .produk-img {
+  padding: 1rem 0;
+}
+.produk .produk-img img {
+  height: 25rem;
+  width: auto;
+}
+.produk .produk-content h3 {
+  font-size: 2rem;
+}
+.produk .produk-stars {
+  font-size: 1.7rem;
+  padding: 0.8rem;
+  color: var(--primary);
+}
+.produk .price {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.produk .price span {
+  text-decoration: line-through;
+  font-weight: lighter;
+  font-size: 1rem;
+  color: white;
 }
 
 /*Kontak*/
