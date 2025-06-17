@@ -104,6 +104,51 @@ nav .search-form label {
   color: var(--bg);
 }
 
+/* Shooping Cart */
+.shopping {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  height: 100vh;
+  width: 35rem;
+  padding: 0 1.5rem;
+  color: var(--bg);
+  background-color: #fff;
+  transition: 0.3s;
+}
+.shopping.active {
+  right: 0;
+}
+.shopping img {
+  height: 6rem;
+  border-radius: 50%;
+}
+.shopping h3 {
+  font-size: 1.6rem;
+  padding-bottom: 0.5rem;
+}
+.shopping .item {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #666;
+  position: relative;
+}
+.shopping .price {
+  font-size: 1.2rem;
+}
+.shopping #remove {
+  position: absolute; /* untuk bebas mengatur posisi, pembungkusnya position : relative*/
+  right: 1rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+.shopping #remove:hover {
+  color: var(--primary);
+}
+
 /*Hero*/
 .hero {
   min-height: 100vh;
