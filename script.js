@@ -1,18 +1,14 @@
-// setup
+//toggle class active hamburger
 const navbar = document.querySelector(".navbar");
 const hamburger = document.querySelector("#hamburger");
-const searchForm = document.querySelector(".search-form");
-const searchBox = document.querySelector("#search-box");
-const searchBtn = document.querySelector("#search-btn");
-const shoopingBtn = document.querySelector("#shooping-btn");
-const shoopingCart = document.querySelector(".shopping");
-
-//toggle class active hamburger
 hamburger.onclick = () => {
   navbar.classList.toggle("active");
 };
 
 // toggle class active search
+const searchForm = document.querySelector(".search-form");
+const searchBox = document.querySelector("#search-box");
+const searchBtn = document.querySelector("#search-btn");
 searchBtn.onclick = (e) => {
   searchForm.classList.toggle("active");
   searchBox.focus();
@@ -20,6 +16,8 @@ searchBtn.onclick = (e) => {
 };
 
 // toggle class active shooping
+const shoopingBtn = document.querySelector("#shooping-btn");
+const shoopingCart = document.querySelector(".shopping");
 shoopingBtn.onclick = (e) => {
   shoopingCart.classList.toggle("active");
   e.preventDefault(); //Mematikan aksi link pada href
@@ -40,3 +38,25 @@ document.addEventListener("click", function (e) {
     shoopingCart.classList.remove("active");
   }
 });
+
+// Detail Produk
+const detailBtns = document.querySelectorAll(".produk-detail-btn");
+const itemModal = document.querySelector("#modal");
+
+detailBtns.forEach((btn) => {
+  btn.onclick = (e) => {
+    itemModal.style.display = "flex";
+    e.preventDefault(); //Mematikan aksi link pada href
+  };
+});
+// Klik tombol X (Close)
+document.querySelector(".bi.bi-x").onclick = (e) => {
+  itemModal.style.display = "none";
+  e.preventDefault(); //Mematikan aksi link pada href
+};
+// Klik diluar modal
+window.onclick = (e) => {
+  if (e.target === itemModal) {
+    itemModal.style.display = "none";
+  }
+};
