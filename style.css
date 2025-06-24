@@ -162,13 +162,21 @@ nav .search-form label {
   -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
   mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
 }
+.hero .mask {
+  position: absolute;
+  inset: 0;
+  -webkit-mask-image: url("img/bg.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  -webkit-mask-position: center;
+}
 .hero main {
   padding: 1.4rem 7%;
   /* max-width: 60rem; */
   width: 100%;
   text-align: center;
   position: fixed;
-  top: 150px;
+  top: 130px;
 }
 .hero main h1 {
   font-size: 5em;
