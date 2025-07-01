@@ -133,14 +133,6 @@ nav .search-form label {
 .shopping.active {
   right: 0;
 }
-.shopping img {
-  height: 6rem;
-  border-radius: 50%;
-}
-.shopping h3 {
-  font-size: 1.6rem;
-  padding-bottom: 0.5rem;
-}
 .shopping .item {
   margin: 2rem 0;
   display: flex;
@@ -150,17 +142,42 @@ nav .search-form label {
   border-bottom: 1px dashed #666;
   position: relative;
 }
-.shopping .price {
+.shopping .item img {
+  height: 5rem;
+  border-radius: 50%;
+}
+.shopping .item h3 {
+  font-size: 1.4rem;
+}
+.shopping .container {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 130%;
+}
+.shopping span {
+  color: #222;
   font-size: 1.2rem;
 }
-.shopping #remove {
-  position: absolute; /* untuk bebas mengatur posisi, pembungkusnya position : relative*/
-  right: 1rem;
-  cursor: pointer;
-  font-size: 1.7rem;
+.shopping .item .price {
 }
-.shopping #remove:hover {
-  color: var(--primary);
+.shopping .item #remove,
+.shopping .item #add {
+  display: inline-block;
+  padding: 2px 5px;
+  cursor: pointer;
+  margin: 0 8px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.shopping h4,
+.shopping h4 span {
+  font-size: 1.6rem;
+  margin-top: -1rem;
+  text-align: center;
 }
 
 /*Hero*/
