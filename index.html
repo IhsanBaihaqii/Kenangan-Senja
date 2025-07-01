@@ -12,6 +12,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- Alpine JS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <!-- Appjs -->
+    <script src="src/app.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -140,79 +147,40 @@
     </section>
 
     <!-- Produk -->
-    <section class="produk" id="produk">
+    <section class="produk" id="produk" x-data="produk">
       <h2><span>Produk Unggulan </span>Kami</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
         molestias ducimus unde et officia dicta.
       </p>
+
       <div class="row">
-        <div class="produk-card">
-          <div class="produk-icon">
-            <a href="#" class="produk-shooping-btn"
-              ><i class="bi bi-cart"></i
-            ></a>
-            <a href="#" class="produk-detail-btn"><i class="bi bi-eye"></i></a>
-          </div>
-          <div class="produk-img">
-            <img src="img/products/produk1.jpg" alt="Produk 1" />
-          </div>
-          <div class="produk-content">
-            <h3>Coffe Beans 1</h3>
-            <div class="produk-stars">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
+        <template x-for="(item, index) in items" x-key="index">
+          <div class="produk-card">
+            <div class="produk-icon">
+              <a href="#" class="produk-shooping-btn"
+                ><i class="bi bi-cart"></i
+              ></a>
+              <a href="#" class="produk-detail-btn"
+                ><i class="bi bi-eye"></i
+              ></a>
             </div>
-            <div class="price">IDR 30K <span>IDR 55K</span></div>
-          </div>
-        </div>
-        <div class="produk-card">
-          <div class="produk-icon">
-            <a href="#" class="produk-shooping-btn"
-              ><i class="bi bi-cart"></i
-            ></a>
-            <a href="#" class="produk-detail-btn"><i class="bi bi-eye"></i></a>
-          </div>
-          <div class="produk-img">
-            <img src="img/products/produk1.jpg" alt="Produk 1" />
-          </div>
-          <div class="produk-content">
-            <h3>Coffe Beans 1</h3>
-            <div class="produk-stars">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
+            <div class="produk-img">
+              <img :src="`img/products/${item.img}`" :alt="item.name" />
             </div>
-            <div class="price">IDR 30K <span>IDR 55K</span></div>
-          </div>
-        </div>
-        <div class="produk-card">
-          <div class="produk-icon">
-            <a href="#" class="produk-shooping-btn"
-              ><i class="bi bi-cart"></i
-            ></a>
-            <a href="#" class="produk-detail-btn"><i class="bi bi-eye"></i></a>
-          </div>
-          <div class="produk-img">
-            <img src="img/products/produk1.jpg" alt="Produk 1" />
-          </div>
-          <div class="produk-content">
-            <h3>Coffe Beans 1</h3>
-            <div class="produk-stars">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
+            <div class="produk-content">
+              <h3 x-text="item.name"></h3>
+              <div class="produk-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div class="price"><span x-text="rupiah(item.price)"></span></div>
             </div>
-            <div class="price">IDR 30K <span>IDR 55K</span></div>
           </div>
-        </div>
+        </template>
       </div>
     </section>
 
