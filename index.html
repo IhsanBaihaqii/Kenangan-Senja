@@ -23,7 +23,7 @@
   </head>
   <body>
     <!--Navbar-->
-    <nav>
+    <nav x-data>
       <a href="#" class="logo">Kenangan <span>senja</span></a>
       <div class="navbar">
         <a href="#">Home</a>
@@ -34,7 +34,13 @@
       </div>
       <div class="extra">
         <a href="#" id="search-btn"><i class="bi bi-search"></i></a>
-        <a href="#" id="shooping-btn"><i class="bi bi-cart"></i></a>
+        <a href="#" id="shooping-btn"
+          ><i class="bi bi-cart"></i>
+          <span
+            x-show="$store.cart.quantity"
+            x-text="$store.cart.quantity"
+          ></span>
+        </a>
         <a id="hamburger"><i class="bi bi-list"></i></a>
       </div>
 
@@ -158,7 +164,7 @@
         <template x-for="(item, index) in items" x-key="index">
           <div class="produk-card">
             <div class="produk-icon">
-              <a href="#" class="produk-shooping-btn"
+              <a class="produk-shooping-btn" @click="$store.cart.add(item)"
                 ><i class="bi bi-cart"></i
               ></a>
               <a href="#" class="produk-detail-btn"

@@ -8,6 +8,18 @@ document.addEventListener("alpine:init", () => {
       { id: 5, name: "Sumatra Mandheling", img: "5.jpg", price: 40000 },
     ],
   }));
+
+  Alpine.store("cart", {
+    items: [],
+    total: 0,
+    quantity: 0,
+    add(getItem) {
+      this.items.push(getItem);
+      this.quantity++;
+      this.total = +this.price;
+      console.log(this.quantity);
+    },
+  });
 });
 
 // Format mata uang
