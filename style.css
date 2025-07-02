@@ -179,6 +179,47 @@ nav .search-form label {
   margin-top: -1rem;
   text-align: center;
 }
+/* Checkout Form */
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top: 1px dashed black;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.form-container form {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-container h5 {
+  text-align: center;
+  font-size: 1.3rem;
+}
+.form-container label {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0;
+}
+.form-container input {
+  background-color: #ddd;
+  padding: 5px;
+  font-size: 1rem;
+  width: 70%;
+}
+.form-container button {
+  padding: 6px 14px;
+  background-color: royalblue;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  margin: 1rem auto;
+  cursor: pointer;
+}
 
 /*Hero*/
 .hero {
@@ -200,6 +241,10 @@ nav .search-form label {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
   -webkit-mask-position: center;
+  mask-image: url("img/bg.svg");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-position: center;
 }
 .hero main {
   padding: 1.4rem 7%;
